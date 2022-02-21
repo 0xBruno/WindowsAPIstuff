@@ -14,10 +14,15 @@ stuff with the Windows API
 3. WriteProcessMemory
 
 
-# Unicode & ANSII
+## Unicode & ANSII
 
 The win32 API will have unicode and ansii version of functions:
 - unicode "W" appended to the name
 - ansii "A" appended to the name
 
+
+## Undocumented API calls
+- Not all Windows APIs are documented on MSDN
+- Windows APIs are an abstraction layer over the native API
+- These native API calls are defined in NTDLL
 
