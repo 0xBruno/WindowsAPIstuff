@@ -1,7 +1,9 @@
-from ctypes import * 
-from ctypes.wintypes import HWND, LPCSTR, UINT, INT, LPSTR, LPDWORD
+from ctypes import *
+from ctypes.wintypes import BOOL, HANDLE, HWND, LPCSTR, UINT, INT, LPSTR, LPDWORD
+from struct import Struct
 from winsound import MB_OK
 
+# Simple MessageBoxA
 MessageBoxA = windll.user32.MessageBoxA
 MessageBoxA.argtypes = (HWND, LPCSTR, LPCSTR, UINT)
 MessageBoxA.restype = INT
@@ -11,6 +13,4 @@ lpCaption = LPCSTR(b"Win32API from Python!")
 uType = UINT(MB_OK)
 
 MessageBoxA(None, lpText, lpCaption, uType)
-
-
 
